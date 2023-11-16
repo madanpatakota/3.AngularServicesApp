@@ -1,3 +1,5 @@
 1 .first class : created the three classes . and given the compnay data
 
 2. second class : created the the company service . and import into the components
+
+3. third class : Use of the provider and how to use into the class
