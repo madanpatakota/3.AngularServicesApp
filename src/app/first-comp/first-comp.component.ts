@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompanyService } from '../company.service';
 
 @Component({
   selector: 'app-first-comp',
@@ -7,6 +8,20 @@ import { Component } from '@angular/core';
 })
 export class FirstCompComponent {
     
-     company = { Name : "Misard.com" , industry : "IT"};
+
+     company = { Name : "" , industry : ""};
+
+     //constructor is a speical method which automatically loaded once class has loaded.
+     //refer the JS classes for more info...
+
+     constructor(){
+        //this.company = { Name : "Misard.com" , industry : "IT"};
+
+        //this way we can create the instance and refer to the variable
+        var companyService = new CompanyService();
+        
+        this.company = new CompanyService().getCompanyDetails();
+
+     }
      
 }
