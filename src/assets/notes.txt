@@ -1,5 +1,21 @@
+
+//Before you cover the services .. people should aware of ngmodel and ngmodelchange.
+
+
+
 1 .first class : created the three classes . and given the compnay data
 
 2. second class : created the the company service . and import into the components
 
 3. third class : Use of the provider and how to use into the class
+
+4. Fourth class : Create the log buttons and pass the data to the logservice for sending the data.
+                  Create the log servie
+                  Use the log Service
+
+
+
+Examples : i have taken 
+
+Service : mobileservices , laptopservies ,
+mobileervice can do recharge , theysellphone , theysellearphones.

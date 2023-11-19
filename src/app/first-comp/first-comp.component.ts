@@ -27,5 +27,11 @@ export class FirstCompComponent {
         this.company = _companyService.getCompanyDetails();
 
      }
+
+     updateCompanyName = "";
+
+     evtFirstGet(){
+      this.updateCompanyName = this._companyService.getCompanyUpdateName("MisardFirst.com");
+     }
      
 }

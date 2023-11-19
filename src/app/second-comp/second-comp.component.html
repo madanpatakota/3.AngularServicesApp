@@ -7,6 +7,17 @@
                   <span class="text-mono">{{company.Name}} : {{company.industry}}</span>
                </div>
             </div>
+            <hr>
+            <div class="row">
+               <div class="col-6">
+                 <input type="text" class="form-control" [value]="updateCompanyName" placeholder="Company Name" />
+               </div>
+               
+               <div class="col-6">
+                 <button class="btn btn-primary" (click)="evtSecondGet()">Get</button>
+               </div>
+               
+             </div>
       </div>
   </div>
 </div>

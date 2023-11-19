@@ -19,5 +19,10 @@ export class SecondCompComponent {
     this.company = _companyService.getCompanyDetails();
 
  }
+ updateCompanyName = "";
+
+ evtSecondGet(){
+  this.updateCompanyName = this._companyService.getCompanyUpdateName("MisardSecond.com");
+ }
      
 }

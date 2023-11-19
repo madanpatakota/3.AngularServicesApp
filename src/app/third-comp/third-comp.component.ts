@@ -18,6 +18,11 @@ export class ThirdCompComponent {
 
  }
 
+ updateCompanyName = "";
+
+ evtThirdGet(){
+  this.updateCompanyName = this._companyService.getCompanyUpdateName("MisardThird.com");
+ }
 
  
 
