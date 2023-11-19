@@ -5,7 +5,7 @@ import { CompanyService } from '../company.service';
   selector: 'app-third-comp',
   templateUrl: './third-comp.component.html',
   styleUrls: ['./third-comp.component.css'],
-  providers:[CompanyService]
+  //providers:[CompanyService]
 })
 export class ThirdCompComponent {
   
@@ -25,7 +25,9 @@ export class ThirdCompComponent {
  }
 
  
-
+ evtThirdPost(){
+  this._companyService.postCompanyUpdates(this.updateCompanyName);
+}
 
      
 }

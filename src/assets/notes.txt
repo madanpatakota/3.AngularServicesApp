@@ -13,6 +13,9 @@
                   Create the log servie
                   Use the log Service
 
+5. Create the table as log table and pass the data to the component to the log table(which is declare in the app level(parent)).
+(Covers why provider can't create as multiple instances here...)
+
 
 
 Examples : i have taken 

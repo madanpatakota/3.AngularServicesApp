@@ -5,7 +5,7 @@ import { CompanyService } from '../company.service';
   selector: 'app-second-comp',
   templateUrl: './second-comp.component.html',
   styleUrls: ['./second-comp.component.css'],
-  providers : [CompanyService]    
+  //providers : [CompanyService]    
   // Useful create the instance of the class. and tell to the angular hey use this as a service .. if you add any class in providers angular treat them as a service and create the instance for that
 })
 export class SecondCompComponent {
@@ -24,5 +24,10 @@ export class SecondCompComponent {
  evtSecondGet(){
   this.updateCompanyName = this._companyService.getCompanyUpdateName("MisardSecond.com");
  }
+
+ evtSecondPost(){
+  this._companyService.postCompanyUpdates(this.updateCompanyName);
+}
+ 
      
 }

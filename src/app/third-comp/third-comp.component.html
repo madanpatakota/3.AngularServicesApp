@@ -12,11 +12,15 @@
       <hr>
       <div class="row">
         <div class="col-6">
-          <input type="text" class="form-control" [value]="updateCompanyName" placeholder="Company Name" />
+          <input type="text" class="form-control" [(ngModel)]="updateCompanyName" placeholder="Company Name" />
         </div>
       
-        <div class="col-6">
-          <button class="btn btn-primary" (click)="evtThirdGet()">Get</button>
+        <div class="col-2">
+          <button class="btn btn-warning" (click)="evtThirdGet()">Get</button>
+        </div>
+
+        <div class="col-3">
+          <button class="btn btn-warning" (click)="evtThirdPost()">Post</button>
         </div>
       </div>
     </div>

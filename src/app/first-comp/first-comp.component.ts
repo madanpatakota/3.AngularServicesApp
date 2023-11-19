@@ -5,7 +5,7 @@ import { CompanyService } from '../company.service';
   selector: 'app-first-comp',
   templateUrl: './first-comp.component.html',
   styleUrls: ['./first-comp.component.css'],
-  providers : [CompanyService]    
+  //providers : [CompanyService]    
   // Useful create the instance of the class. and tell to the angular hey use this as a service .. if you add any class in providers angular treat them as a service and create the instance for that
 })
 export class FirstCompComponent {
@@ -32,6 +32,10 @@ export class FirstCompComponent {
 
      evtFirstGet(){
       this.updateCompanyName = this._companyService.getCompanyUpdateName("MisardFirst.com");
+     }
+
+     evtFirstPost(){
+        this._companyService.postCompanyUpdates(this.updateCompanyName);
      }
      
 }

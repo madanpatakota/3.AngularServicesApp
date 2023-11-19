@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CompanyService } from './company.service';
+import { Component , OnInit } from '@angular/core';
+import { CompanyService  } from './company.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,31 @@ import { CompanyService } from './company.service';
   styleUrls: ['./app.component.css'],
   providers:[CompanyService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'AngularServicesApp';
+  
   constructor(public companyService : CompanyService){
-    
   }
+
+
+  allCompaniesDetails:any = [];
+  ngOnInit(): void {
+    this.companyService.eventEmitter.subscribe((value)=>{
+     console.log("Data in appcomponent level" , value);
+     this.allCompaniesDetails.push(value);
+    })
+  }
+
+  
+
+
+
+  
+
+
+
+
+
+
+
 }
