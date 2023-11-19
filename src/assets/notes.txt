@@ -20,5 +20,13 @@
 
 Examples : i have taken 
 
+
+6.split the table from appcomponent and make it is another component.
+ (while working on mobile incase if anything wrong he might be depenands anohter servie right)
+
+
+
 Service : mobileservices , laptopservies ,
 mobileervice can do recharge , theysellphone , theysellearphones.
+
+

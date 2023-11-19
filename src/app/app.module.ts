@@ -6,6 +6,7 @@ import { FirstCompComponent } from './first-comp/first-comp.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
 import { ThirdCompComponent } from './third-comp/third-comp.component';
 import { FormsModule } from '@angular/forms';
+import {  DetailsComponent } from './details-comp/details-comp.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     FirstCompComponent,
     SecondCompComponent,
-    ThirdCompComponent
+    ThirdCompComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

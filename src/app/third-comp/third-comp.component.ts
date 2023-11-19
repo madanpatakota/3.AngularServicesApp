@@ -13,7 +13,7 @@ export class ThirdCompComponent {
   constructor(public _companyService : CompanyService){
     //this.company = { Name : "Misard.com" , industry : "IT"};
     //this way we can create the instance and refer to the variable
-    var companyService = new CompanyService();
+    //var companyService = new CompanyService();
     this.company = _companyService.getCompanyDetails();
 
  }

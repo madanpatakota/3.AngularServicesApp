@@ -5,11 +5,12 @@
 // Responsibility of the getCompanyDetails is returns the company related data.
 
 import { EventEmitter , Injectable } from "@angular/core";
+import { InfoServie } from "./info.service";
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class CompanyService {
 
-  constructor(){
+  constructor(private infoService : InfoServie){
 
   }
   
@@ -22,6 +23,7 @@ export class CompanyService {
 
   postCompanyUpdates(companyName:string){
      this.eventEmitter.emit(companyName);
+     this.infoService.receivedData(companyName);
   }
 
   getCompanyUpdateName(companyName:string){
