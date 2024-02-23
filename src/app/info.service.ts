@@ -3,6 +3,7 @@ import {  EventEmitter , Injectable } from '@angular/core'
 
 
 @Injectable({providedIn:'root'})
+//Or you can register into the appmodule ts file also.
 export class InfoServie{
   
   
