@@ -1,12 +1,41 @@
 <div class="container mt-5">
   <div class="card">
-   <div class="card-header bg-primary text-white">First Component</div>
-      <div class="card-body">
-            <div class="row">
-               <div class="col-12">
-                  <span class="text-mono">{{company.Name}} : {{company.industry}}</span>
-               </div>
+    <div class="card-header bg-primary text-white">First Component</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12">
+          <!-- <span class="text-mono">{{company.Name}} : {{company.industry}}</span> -->
+          <div class="container">
+            <div class="container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Full Name</th>
+
+                    <!-- If you want to add these columns you can add. but i do't want to show all the columns as of now for time being....-->
+                    <!-- <th scope="col">City</th>
+                              <th scope="col">Postal Code</th>
+                              <th scope="col">Country</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let employee of EmployeesList">
+                    <td>{{ employee.EmployeeID }}</td>
+                    <td>{{ employee.FullName }}</td>
+
+                    <!-- If you want to add these columns you can add. but i do't want to show all the columns as of now for time being....-->
+                    
+                    <!-- <td>{{ employee.City }}</td>
+                              <td>{{ employee.PostalCode }}</td>
+                              <td>{{ employee.Country }}</td> -->
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </div>
