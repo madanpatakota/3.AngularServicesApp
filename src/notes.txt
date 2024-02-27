@@ -12,5 +12,17 @@ and how to subscribe the observable ? Of , switchmap , mergemap....
 
 
 while explaingin ghe Typescript take employee model and you should use the same data.
+constructor explain private and pubic keywords in the javascript
 
+
+
+Branches Information :
+=======================
+
+1. We have created the EmployeeArray and bind to the Table .
+   Here EmployeeArray is available in 3 components
+
+2. We created the EmployeeSerivce and move to the EmployeeArray into that 
+
+3. We created the dependency in the components
 
