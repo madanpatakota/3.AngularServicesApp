@@ -1,0 +1,16 @@
+
+
+Once services completed explain about the observable and how to implement the observable into service like 
+
+ getEmployeeList(): Observable<Employee[]> {
+    return of(this.employees);
+  }
+
+
+What is Observable (PPTs are so important for this)
+and how to subscribe the observable ? Of , switchmap , mergemap....
+
+
+while explaingin ghe Typescript take employee model and you should use the same data.
+
+
