@@ -25,13 +25,58 @@
                     <td>{{ employee.FullName }}</td>
 
                     <!-- If you want to add these columns you can add. but i do't want to show all the columns as of now for time being....-->
-                    
+
                     <!-- <td>{{ employee.City }}</td>
                               <td>{{ employee.PostalCode }}</td>
                               <td>{{ employee.Country }}</td> -->
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <hr class="my-4 bg-info" />
+            </div>
+          </div>
+
+          <!-- Normal Dropdown-->
+          <!-- <div class="col-5 mt-3">
+            <select class="form-select">
+              <option value="" disabled selected>Select City</option>
+              <option value="101">London</option>
+              <option value="102">Seattle</option>
+              <option value="103">Tacoma</option>
+              <option value="104">Kirkland</option>
+              <option value="105">Redmond</option>
+            </select>
+          </div> -->
+        </div>
+
+        <br />
+      </div>
+      <!--Dropdown binding by the data-->
+      <div class="row">
+        <div class="col-12 mt-1">
+          <div class="row">
+            <div class="col-6">
+              <select
+                class="form-select"
+                (change)="filterByCity($event.target)"
+              >
+                <option value="" disabled selected>Select City</option>
+                <option *ngFor="let city of CityList" [value]="city.CityID">
+                  {{ city.CityName }}
+                </option>
+              </select>
+            </div>
+            <div class="col-2">
+              <button class="btn btn-primary">Get</button>
+              
+            </div>
+            <div class="col-2">
+              <button class="btn btn-danger">Delete</button>
             </div>
           </div>
         </div>
