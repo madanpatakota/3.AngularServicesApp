@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { FirstCompComponent } from './first-comp/first-comp.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
 import { ThirdCompComponent } from './third-comp/third-comp.component';
+import { FormsModule } from '@angular/forms';
+import { ActivityService } from './activity.service';
+import { EmployeeService } from './employee.service';
 
 
 @NgModule({
@@ -15,9 +18,10 @@ import { ThirdCompComponent } from './third-comp/third-comp.component';
     ThirdCompComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService , ActivityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,8 @@
+import { EventEmitter, Inject, Injectable } from '@angular/core';
+import { ActivityService } from './activity.service';
 import { Employee } from './employee.model';
 
+@Injectable()
 export class EmployeeService {
   private employees: Employee[] = [
     // Add other employees here
@@ -69,9 +72,20 @@ export class EmployeeService {
     },
   ];
 
-  constructor() {}
+  constructor(public activityService: ActivityService) {}
 
   getEmployeeList(): Employee[] {
     return this.employees;
+  }
+
+  //Here If any one subscribe the notificationEmitter they will receive the latest data.
+  //So latest data will be available when getLatestNotifications will be fired.
+
+  notificationEmitter = new EventEmitter<string>();
+  getLatestNotifications(message: string, componentName: string) {
+    let returnMessage = this.activityService.getActivity(message,componentName);
+
+    //Here we are injecting the returnMessage into notificationEmitter.
+    this.notificationEmitter.emit(returnMessage);
   }
 }

@@ -9,7 +9,7 @@ declare var bootstrap: any;
   selector: 'app-first-comp',
   templateUrl: './first-comp.component.html',
   styleUrls: ['./first-comp.component.css'],
-  providers: [EmployeeService , CityService],
+  providers: [ CityService],
 })
 export class FirstCompComponent implements OnInit {
   //company = { Name : "Misard.com" , industry : "IT"};
@@ -19,12 +19,14 @@ export class FirstCompComponent implements OnInit {
   CityList     : City[]     = [];
   OriginalEmployeeList : Employee[] = [];
 
+  cityValue = "";
+
   //So here you are adding the dependencies of the component...
   // As of now here employeeService is the dependency . you can create the multiple dependencies.
   // When you are adding the service dependency into the component . then you should give the instruction to the angular compiler that in the format of provider
 
   // Another dependency Router (We will disuss in the next section)
-  constructor(private employeeService: EmployeeService , public cityService:CityService) {}
+  constructor(public employeeService: EmployeeService , public cityService:CityService) {}
 
   ngOnInit(): void {
     // Here Creating the reference of the EmployeeService and then based on that reference we are calling the getEmployeeList
@@ -46,4 +48,15 @@ export class FirstCompComponent implements OnInit {
      //? incase if city having the details then it calls CityName Property incase city do't have details it would't call CityName property
      this.EmployeesList = this.OriginalEmployeeList.filter(x=>x.City  == city?.CityName);
   }
+
+
+  btnFilterByCity(cityValue : string){
+    //console.log(cityValue);
+     
+    let city = this.CityList.find(x=>x.CityID == parseInt(cityValue));
+    //? incase if city having the details then it calls CityName Property incase city do't have details it would't call CityName property
+    this.EmployeesList = this.OriginalEmployeeList.filter(x=>x.City  == city?.CityName);
+
+  }
+
 }

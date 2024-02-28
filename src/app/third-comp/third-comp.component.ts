@@ -6,7 +6,7 @@ import { EmployeeService } from '../employee.service';
   selector: 'app-third-comp',
   templateUrl: './third-comp.component.html',
   styleUrls: ['./third-comp.component.css'],
-  providers:[EmployeeService]
+  providers:[]
 })
 export class ThirdCompComponent implements OnInit {
   //company = { Name : "Misard.com" , industry : "IT"};
@@ -19,7 +19,7 @@ export class ThirdCompComponent implements OnInit {
   // When you are adding the service dependency into the component . then you should give the instruction to the angular compiler that in the format of provider
 
   // Another dependency Router (We will disuss in the next section)
-  constructor(private employeeService: EmployeeService) {}
+  constructor(public employeeService: EmployeeService) {}
 
   ngOnInit(): void {
     // Here Creating the reference of the EmployeeService and then based on that reference we are calling the getEmployeeList

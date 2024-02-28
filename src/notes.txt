@@ -28,3 +28,6 @@ Branches Information :
 
 4. Creating the SearchMethod in EmployeeSerivce and created the dropdown 
 
+5. Created Bootstrap notification Message.
+   Created Activity service , added @injectable and removed the Employee service from first , second and third make private to public
+
