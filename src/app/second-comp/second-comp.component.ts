@@ -26,4 +26,10 @@ export class SecondCompComponent implements OnInit {
     //var employeeService = new EmployeeService();
     this.EmployeesList = this.employeeService.getEmployeeList();
   }
+
+
+
+  sendEmployeeDetails(employee:Employee){
+
+  }
 }

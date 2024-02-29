@@ -1,5 +1,5 @@
 import { EventEmitter, Inject, Injectable } from '@angular/core';
-import { ActivityService } from './activity.service';
+import { NotificationService } from './notification.service';
 import { Employee } from './employee.model';
 
 @Injectable()
@@ -72,7 +72,7 @@ export class EmployeeService {
     },
   ];
 
-  constructor(public activityService: ActivityService) {}
+  constructor(public notificationService: NotificationService) {}
 
   getEmployeeList(): Employee[] {
     return this.employees;
@@ -83,7 +83,7 @@ export class EmployeeService {
 
   notificationEmitter = new EventEmitter<string>();
   getLatestNotifications(message: string, componentName: string) {
-    let returnMessage = this.activityService.getActivity(message,componentName);
+    let returnMessage = this.notificationService.LatestNotification(message,componentName);
 
     //Here we are injecting the returnMessage into notificationEmitter.
     this.notificationEmitter.emit(returnMessage);

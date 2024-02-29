@@ -30,4 +30,8 @@ Branches Information :
 
 5. Created Bootstrap notification Message.
    Created Activity service , added @injectable and removed the Employee service from first , second and third make private to public
+   Added the notify button in second component.
+   Added the bootstrap icon for showing the notification icon
+   for that install below command and add the ref in angular.json
+   npm install bootstrap-icons
 

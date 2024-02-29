@@ -35,6 +35,12 @@
                   <tr *ngFor="let employee of EmployeesList">
                     <td>{{ employee.EmployeeID }}</td>
                     <td>{{ employee.City }}</td>
+                    <td>
+                      <button type="button" class="btn btn-primary" (click)="sendEmployeeDetails(employee)">
+                        <i class="bi bi-bell"></i>
+                        <!-- Bootstrap bell icon -->
+                      </button>
+                    </td>
 
                     <!-- If you want to add these columns you can add. but i do't want to show all the columns as of now for time being....-->
 

@@ -6,7 +6,7 @@ import { FirstCompComponent } from './first-comp/first-comp.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
 import { ThirdCompComponent } from './third-comp/third-comp.component';
 import { FormsModule } from '@angular/forms';
-import { ActivityService } from './activity.service';
+import { NotificationService } from './notification.service';
 import { EmployeeService } from './employee.service';
 
 
@@ -21,7 +21,7 @@ import { EmployeeService } from './employee.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [EmployeeService , ActivityService],
+  providers: [EmployeeService , NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
