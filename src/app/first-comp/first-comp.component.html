@@ -56,10 +56,12 @@
 
         <br />
       </div>
+
       <!--Dropdown binding by the data-->
       <div class="row">
         <div class="col-12 mt-1">
           <div class="row">
+            <div class="col-1"></div>
             <div class="col-6">
               <!--  -->
               <select class="form-select" [(ngModel)]="cityValue">
@@ -69,15 +71,36 @@
                 </option>
               </select>
             </div>
-            <div class="col-2">
-              <button class="btn btn-primary" (click)="btnFilterByCity(cityValue)">Get</button>
+            <div class="col-4">
+              <button
+                class="btn btn-primary"
+                (click)="btnFilterByCity(cityValue)"
+              >
+                Get
+              </button>
             </div>
-            <div class="col-2">
-              <button class="btn btn-danger">Delete</button>
-            </div>
+            <!-- <div class="col-2">
+              <button class="btn btn-danger" (click)="btnDeleteEmployeeByID()" >Delete</button>
+            </div> -->
           </div>
         </div>
       </div>
+
+      <!--Textbox-->
+      <!-- <hr>
+      <div class="row">
+        <div class="col-12 mt-1">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-6">
+              <input type="text" placeholder="Enter City Name" class="form-control" [(ngModel)]="message" />
+            </div>
+            <div class="col-4">
+              <button class="btn btn-warning" (click)="btnPostMessage()">Post</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
   </div>
 </div>

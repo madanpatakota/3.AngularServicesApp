@@ -81,11 +81,22 @@ export class EmployeeService {
   //Here If any one subscribe the notificationEmitter they will receive the latest data.
   //So latest data will be available when getLatestNotifications will be fired.
 
+  //Here who ever subscribe this notificationEmitter then they will receive the latest record.
   notificationEmitter = new EventEmitter<string>();
+
+
   getLatestNotifications(message: string, componentName: string) {
+
+    //connecting to the LatestNotifcation method for latest  news
     let returnMessage = this.notificationService.LatestNotification(message,componentName);
 
-    //Here we are injecting the returnMessage into notificationEmitter.
+    //Here we are injecting the notification messages into notificationEmitter.
     this.notificationEmitter.emit(returnMessage);
+  }
+
+
+  deleteEmployeeByID(empID : number){
+    
+
   }
 }

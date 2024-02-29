@@ -30,6 +30,6 @@ export class SecondCompComponent implements OnInit {
 
 
   sendEmployeeDetails(employee:Employee){
-
+    this.employeeService.getLatestNotifications(employee.City , "Second Component");
   }
 }

@@ -46,6 +46,14 @@
           </div>
         </div>
       </div>
+
+      <div class="row" *ngIf="isShowNotifications">
+        <hr />
+        <div class="col-12">
+          <strong>Notifications Area!!</strong>
+          <p>{{ notificationMessage }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

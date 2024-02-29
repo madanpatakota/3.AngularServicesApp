@@ -59,4 +59,10 @@ export class FirstCompComponent implements OnInit {
 
   }
 
+
+  message = ""
+  btnPostMessage(){
+     this.employeeService.getLatestNotifications(this.message, "First Component");
+  }
+
 }

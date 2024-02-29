@@ -14,6 +14,8 @@ and how to subscribe the observable ? Of , switchmap , mergemap....
 while explaingin ghe Typescript take employee model and you should use the same data.
 constructor explain private and pubic keywords in the javascript
 
+settimeout , setinterval should cover in js
+
 
 
 Branches Information :
@@ -34,4 +36,8 @@ Branches Information :
    Added the bootstrap icon for showing the notification icon
    for that install below command and add the ref in angular.json
    npm install bootstrap-icons
+   Second - Parent
+
+6. Making the communication to the third component from second component 
+   Second - Third
 

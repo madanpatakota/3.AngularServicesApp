@@ -25,14 +25,14 @@
       </div>
     </div>
   </div>
-  <div class="container mt-3">
+  <div class="container" *ngIf="isShowNotification">
     <div class="row justify-content-end">
       <div class="col-auto">
         <div
-          class="alert alert-success alert-dismissible position-fixed top-0 end-0 mt-3 fade show"
+          class="alert alert-success alert-dismissible position-fixed top-0 end-0 fade show"
           role="alert"
         >
-          <strong>Success!</strong> Your operation was successful.
+         <strong>Success!!</strong> <p> {{notificationMessage}} </p>
           <button
             type="button"
             class="btn-close"
