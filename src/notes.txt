@@ -41,3 +41,7 @@ Branches Information :
 6. Making the communication to the third component from second component 
    Second - Third
 
+7. Added the Column Information . For that added the event emitter from notifyService 
+   
+   added Button into the appcomponent and share the details to the first , second , third component information 
+

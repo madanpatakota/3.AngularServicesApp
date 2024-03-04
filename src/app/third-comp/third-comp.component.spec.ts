@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThirdAppComponent } from './third-comp.component';
+import { ThirdCompComponent } from './third-comp.component';
 
 describe('ThirdAppComponent', () => {
-  let component: ThirdAppComponent;
-  let fixture: ComponentFixture<ThirdAppComponent>;
+  let component: ThirdCompComponent;
+  let fixture: ComponentFixture<ThirdCompComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ThirdAppComponent]
+      declarations: [ThirdCompComponent]
     });
-    fixture = TestBed.createComponent(ThirdAppComponent);
+    fixture = TestBed.createComponent(ThirdCompComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

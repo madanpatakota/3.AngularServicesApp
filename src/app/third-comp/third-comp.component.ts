@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee.model';
 import { EmployeeService } from '../employee.service';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-third-comp',
@@ -23,7 +24,9 @@ export class ThirdCompComponent implements OnInit {
   notificationMessage = '';
   isShowNotifications = false;
 
-  constructor(public employeeService: EmployeeService) {}
+  componentName = '';
+
+  constructor(public employeeService: EmployeeService , public notificationService : NotificationService) {}
 
   ngOnInit(): void {
     // Here Creating the reference of the EmployeeService and then based on that reference we are calling the getEmployeeList
@@ -39,6 +42,13 @@ export class ThirdCompComponent implements OnInit {
     setInterval(()=>{
         this.isShowNotifications = false;
         this.notificationMessage = "";
-    },5000)
+    },5000);
+
+   //Subscribing the componentNamesEventEmitter for componentNames
+   this.notificationService.componentNamesEventEmitter.subscribe(
+    (componentNames) => {
+      this.componentName = componentNames[2];
+    }
+  );
   }
 }

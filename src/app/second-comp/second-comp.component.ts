@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee.model';
 import { EmployeeService } from '../employee.service';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-second-comp',
@@ -14,17 +15,26 @@ export class SecondCompComponent implements OnInit {
   // Creating the EmployeeList Variable and that Variable should be accept the data in the format of Employee Array
   EmployeesList: Employee[] = [];
 
+
+  componentName = '';
   //So here you are adding the dependencies of the component...
   // As of now here employeeService is the dependency . you can create the multiple dependencies.
   // When you are adding the service dependency into the component . then you should give the instruction to the angular compiler that in the format of provider
 
   // Another dependency Router (We will disuss in the next section)
-  constructor(public employeeService: EmployeeService) {}
+  constructor(public employeeService: EmployeeService , public notificationService : NotificationService) {}
 
   ngOnInit(): void {
     // Here Creating the reference of the EmployeeService and then based on that reference we are calling the getEmployeeList
     //var employeeService = new EmployeeService();
     this.EmployeesList = this.employeeService.getEmployeeList();
+
+     //Subscribing the componentNamesEventEmitter for componentNames
+     this.notificationService.componentNamesEventEmitter.subscribe(
+      (componentNames) => {
+        this.componentName = componentNames[1];
+      }
+    );
   }
 
 

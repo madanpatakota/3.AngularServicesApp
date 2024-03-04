@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from './employee.service';
+import { NotificationService } from './notification.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { EmployeeService } from './employee.service';
 export class AppComponent implements OnInit {
   title = 'AngularServicesApp';
 
-  constructor(private employeeService: EmployeeService) {
+  constructor(private employeeService: EmployeeService , private notificationService : NotificationService) {
    
   }
 
@@ -30,6 +31,14 @@ export class AppComponent implements OnInit {
       this.notificationMessage = '';
       this.isShowNotification = false;
     }, 5000);
-    
+
+  }
+
+
+  btnClick(){
+    // //Emitting the columns by using the notification service
+   
+    let componentNames = [ "FullName" , "City" , "PostalCode , Country"];
+     this.notificationService.componentNamesEventEmitter.emit(componentNames)
   }
 }
